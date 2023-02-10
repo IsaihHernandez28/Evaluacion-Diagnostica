@@ -17,6 +17,9 @@ void printArray(int size, int *array)
         printf("Dato[%d]: %d \n",index,*(array+index));
 }
 
+//FUNCIONES PEDIDAS POR EL PROFESOR PARA EL EXAMEN DIAGNÓSTICO
+
+//INSERTA AL FINAL DE UN ARREGLO
 void addAtTail(int data, int **array, int *size)
 {
     int *newArray;
@@ -31,6 +34,7 @@ void addAtTail(int data, int **array, int *size)
     }
 }
 
+//INSERTA AL INICIO DEL ARREGLO
 void addAtFront(int data, int **array, int *size)
 {
     int *newArray;
@@ -47,17 +51,20 @@ void addAtFront(int data, int **array, int *size)
     }
 }
 
+//INDICA CUANTOS DATOS SE HAN INSERTADO
 void getSize(int size)
 {
     printf("Size = %d \n",size);
 }
 
+//BORRA TODOS LOS DATOS INSERTADOS EN EL ARREGLO
 void removeAll(int **array, int *size)
 {
     free(*array);
     *size = 0;
 }
 
+//RECIBE UN INDICE Y DEVUELVE EL VALOR EN ESA POSICIÓN SI ES VÁLIDO
 int getAt(int *array, int index, int size)
 {
     int newData;
@@ -71,6 +78,7 @@ int getAt(int *array, int index, int size)
         return newData = *(array + index);
 }
 
+//MAIN DE PRUEBA PARA LAS FUNCIONES
 int main()
 {
     int size, data, index, aux;
